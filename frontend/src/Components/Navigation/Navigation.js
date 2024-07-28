@@ -23,6 +23,7 @@ import { signout } from '../../utils/Icons';
                         return <li
                             key={item.id}
                             onClick={() => setActive(item.id)}
+                            className={active === item.id ? 'active' : '' }
                             >
                             {item.icon}
                             <span>{item.title}</span>
@@ -39,30 +40,29 @@ import { signout } from '../../utils/Icons';
 }
 
 const NavStyled = styled.nav`
-
-    padding: 20px 20px;
-    width: 20%;
-    height: 70%;
+    padding: 2rem 1.5rem;
+    width: 374px;
+    height: 100%;
     background: rgba(252, 246, 249, 0.78);
     border: 3px solid #FFFFFF;
     backdrop-filter: blur(4.5px);
-    border-radius: 5%;
+    border-radius: 32px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 50px;
+    gap: 2rem;
     .user-con{
-        height: 30%;
+        height: 100px;
         display: flex;
         align-items: center;
         gap: 1rem;
         img{
-            width: 50%;
-            height: 100%;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
             object-fit: cover;
             background: #fcf6f9;
-            border: 10px solid #FFFFFF;
+            border: 2px solid #FFFFFF;
             padding: .2rem;
             box-shadow: 0px 1px 17px rgba(0, 0, 0, 0.06);
         }
@@ -107,13 +107,14 @@ const NavStyled = styled.nav`
             position: absolute;
             left: 0;
             top: 0;
-            width: 20%;
+            width: 4px;
             height: 100%;
             background: #222260;
             border-radius: 0 10px 10px 0;
         }
     }
 `;
+
 
 export default Navigation
 
